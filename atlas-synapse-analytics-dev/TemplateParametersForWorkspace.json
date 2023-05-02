@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "atlas-synapse-analytics-dev"
+		},
+		"atlas-synapse-analytics-dev-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:atlas-synapse-analytics-dev.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"ls_rest_pbi_generic_clientSecret": {
+			"value": ""
+		},
+		"synapse_database_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=@{linkedService().server_endpoint};Initial Catalog=@{linkedService().db_name}"
+		},
+		"atlas-synapse-analytics-dev-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://syndevdatalake3yybn.dfs.core.windows.net/"
+		},
+		"datalakegen2atlasdev_properties_typeProperties_url": {
+			"value": "https://datalakegen2atlasdev.dfs.core.windows.net/"
+		},
+		"ls_rest_pbi_generic_properties_typeProperties_url": {
+			"value": "https://api.powerbi.com/v1.0/myorg/"
+		},
+		"ls_rest_pbi_generic_properties_typeProperties_clientId": {
+			"value": "e54b4eb5-11ef-4a1e-92d6-a749f034426c"
+		}
+	}
+}
